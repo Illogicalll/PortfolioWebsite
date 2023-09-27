@@ -1,0 +1,87 @@
+.section {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: auto;
+    width: 2%;
+    border-radius: 50%;
+    user-select: none;
+}
+
+.theme {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: auto;
+    width: 2%;
+    transform-origin: 100 100;
+}
+
+.hero {
+    position: absolute;
+    margin: 0;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    user-select: none;
+}
+
+.subtitle {
+    font-size: clamp(0px, calc(0.5vh + 0.5vw), 25px);
+}
+
+.nav {
+    position: absolute;
+    right: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+    height: auto;
+    user-select: none;
+}
+
+.continue {
+    position: absolute;
+    left: 50%;
+    bottom: 2%;
+    transform: translateX(-50%);
+    width: 2%;
+    height: auto;
+    min-width: 20px;
+    border: 2px solid black;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+    transition: left 0.3s ease;
+    transition: background-color 0.3s ease;
+}
+
+.continue:hover {
+    background-color: black;
+
+}
+
+.arrow {
+    transition: filter 0.3s ease;
+}
+
+.arrow:hover {
+    filter: invert(100%);
+}
+
+@media screen and (max-height: 500px) {
+    .continue {
+        left: 20px;
+        transform: translateX(0);
+    }
+}
