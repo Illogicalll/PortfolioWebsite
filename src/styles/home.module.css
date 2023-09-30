@@ -22,6 +22,53 @@
     height: auto;
     width: 2%;
     transform-origin: 100 100;
+    transition: filter 0.3s ease;
+    border-radius: 50%;
+    transition: box-shadow 0.3s ease;
+}
+
+@keyframes dark-glow {
+    0% {
+      box-shadow: 0 0 10px 0 rgba(0, 0, 255, 0.7);
+      background-color: rgba(0, 0, 255, 0.4);
+    }
+    50% {
+      box-shadow: 0 0 20px 10px rgba(0, 0, 255, 0.4);
+      background-color: rgba(0, 0, 255, 0.3);
+    }
+    100% {
+      box-shadow: 0 0 10px 0 rgba(0, 0, 255, 0.7);
+      background-color: rgba(0, 0, 255, 0.4);
+    }
+}
+
+@keyframes light-glow {
+    0% {
+      box-shadow: 0 0 10px 0 rgba(0, 72, 255, 0.7);
+      background-color: rgba(0, 72, 255, 0.4);
+    }
+    50% {
+      box-shadow: 0 0 20px 10px rgba(0, 72, 255, 0.9);
+      background-color: rgba(0, 72, 255, 0.7);
+    }
+    100% {
+      box-shadow: 0 0 10px 0 rgba(0, 72, 255, 0.7);
+      background-color: rgba(0, 72, 255, 0.4);
+    }
+}
+
+.light {
+    filter: invert(100%);
+}
+
+.dark:hover {
+    animation: dark-glow 2s infinite;
+    border-radius: 50%;
+}
+
+.light:hover {
+    animation: light-glow 2s infinite;
+    border-radius: 50%;
 }
 
 .hero {
@@ -42,7 +89,7 @@
 }
 
 .nav {
-    position: absolute;
+    position: fixed;
     right: 2%;
     top: 50%;
     transform: translateY(-50%);
@@ -62,7 +109,6 @@
     border-radius: 50px;
     align-items: center;
     justify-content: center;
-    transition: left 0.3s ease;
     transition: background-color 0.3s ease;
 }
 
@@ -81,7 +127,74 @@
 
 @media screen and (max-height: 500px) {
     .continue {
+        transition: left 0.3s ease;
         left: 20px;
         transform: translateX(0);
     }
+}
+
+.info {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    right: 15%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.textSection {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.sectionTitle {
+    font-size: clamp(0px, calc(2vh + 2vw), 100px);
+    font-weight: 600;
+}
+
+.sectionText {
+    font-size: clamp(0px, calc(0.7vh + 0.7vw), 50px);
+}
+
+.sectionMedia {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.sectionImage {
+    border-radius: 50%;
+}
+
+.projectGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 80%;
+    row-gap: 30px;
+    column-gap: 30px;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    outline: 1px solid black;
+    border-radius: 20%;
+    padding: 30px;
+}
+
+.projectImage {
+    border-radius: 50%;;
+}
+
+.projectTitle {
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.projectDescription {
+    white-space: nowrap;
 }
