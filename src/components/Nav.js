@@ -1,16 +1,25 @@
-import NavCSS from "../styles/nav.module.css";
 import { useColorMode } from '@chakra-ui/react';
+import { Link } from 'react-scroll';
 
-export default function Nav() {
+export default function Nav({sectionNames}) {
 
     const { colorMode } = useColorMode();
 
     return (
-        <div className={NavCSS.nav}>
-            <div className={NavCSS.dot} style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}></div>
-            <div className={NavCSS.dot} style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}></div>
-            <div className={NavCSS.dot} style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}></div>
-            <div className={NavCSS.dot} style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}></div>
+        <div class="nav">
+            {sectionNames.map((sectionName, index) => (
+                <Link
+                activeStyle={{transition: 'opacity 0.3s ease', opacity: '0.2'}}
+                key={index}
+                to={sectionName}
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={600}
+                >
+                    <div class="dot" style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}></div>
+                </Link>
+            ))}
         </div>
     );
 }

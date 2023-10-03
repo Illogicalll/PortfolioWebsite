@@ -34,14 +34,16 @@ import Nav from "./components/Nav";
 
 export default function App() {
 
+  const sectionNames = ['landing', 'about', 'projects', 'experience'];
+
   return (
     <div>
       <ChakraProvider>
-        <Nav />
+        <Nav sectionNames={sectionNames} />
         <LuxyWrapper>
           <BrowserRouter>
             <Routes>
-              <Route index path="/" element={<Home />} />
+              <Route index path="/" element={<Home sectionNames={sectionNames} />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="*" element={<NoPage />} />
