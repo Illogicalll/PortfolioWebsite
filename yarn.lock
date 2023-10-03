@@ -7524,6 +7524,11 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
+luxy.js@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/luxy.js/-/luxy.js-0.1.0.tgz#43e60e76ccb6431c4fd258484eacdca8b9981352"
+  integrity sha512-G26qu+HjBbZKyIRsgQVxR1dxw7mJ4g7ckqJ/0u8p6og1Lnp7w1rwdaw4jjoAb0UQZGoIzTvU+CGEbCNmJXvyQw==
+
 lz-string@^1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/lz-string/-/lz-string-1.5.0.tgz#c1ab50f77887b712621201ba9fd4e3a6ed099941"
@@ -8961,6 +8966,11 @@ react-router@6.16.0:
   integrity sha512-VT4Mmc4jj5YyjpOi5jOf0I+TYzGpvzERy4ckNSvSh2RArv8LLoCxlsZ2D+tc7zgjxcY34oTz2hZaeX5RVprKqA==
   dependencies:
     "@remix-run/router" "1.9.0"
+
+react-script-tag@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/react-script-tag/-/react-script-tag-1.1.2.tgz#be0fa3a22dfae8165d083f6bc1ff6f9799b20d44"
+  integrity sha512-4oR9ntvGfX4igiP77vK310ru5Oa77xO7CeYB3Xi9lu0qsikpGpK1Kq1WMFocvy8U4fQFq8ovtrZS/8adfCziFw==
 
 react-scripts@5.0.1:
   version "5.0.1"

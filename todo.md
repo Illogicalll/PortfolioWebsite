@@ -1,8 +1,6 @@
 # Todo
 
-- add more sections to main page
 - fix/come up with new project view
-- implement inertia scrolling
 - implement nav dot system
 - implement continue arrow functionality
 - hide continue arrow when not scrolled to top of page

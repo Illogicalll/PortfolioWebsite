@@ -29,19 +29,25 @@ import Contact from "./pages/Contact";
 import NoPage from "./pages/NoPage";
 import "./styles/global.css";
 import { ChakraProvider } from "@chakra-ui/react";
+import LuxyWrapper from "./components/LuxyWrapper";
+import Nav from "./components/Nav";
 
 export default function App() {
+
   return (
     <div>
       <ChakraProvider>
-        <BrowserRouter>
-          <Routes>
-            <Route index path="/" element={<Home />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="*" element={<NoPage />} />
-          </Routes>
-        </BrowserRouter>
+        <Nav />
+        <LuxyWrapper>
+          <BrowserRouter>
+            <Routes>
+              <Route index path="/" element={<Home />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="*" element={<NoPage />} />
+            </Routes>
+          </BrowserRouter>
+        </LuxyWrapper>
       </ChakraProvider>
     </div>
   );

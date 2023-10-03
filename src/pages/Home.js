@@ -17,7 +17,7 @@ export default function Home() {
     return (
         <div style={{ backgroundColor: bgColor }}>
             <div className={HomeCSS.section}>
-                <div className={HomeCSS.landing}>
+                {/* <div className={HomeCSS.landing}> */}
                     <img className={HomeCSS.logo} src="https://avatars.githubusercontent.com/u/68807296?v=4" alt="Will M." />
                     <div className={HomeCSS.theme} onClick={doColorMode}>
                         {colorMode === 'light' ? <MoonIcon className={HomeCSS.dark} boxSize="100%"/> : <SunIcon className={HomeCSS.light} boxSize="100%"/>}
@@ -46,13 +46,10 @@ export default function Home() {
                             <p>Computer Science Student</p>
                         </div>
                     </div>
-                    <div className={HomeCSS.nav} style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>
-                        nav
-                    </div>
                     <div className={HomeCSS.continue} style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>
                         <ArrowDownIcon className={HomeCSS.arrow} boxSize="100%"/>
                     </div>
-                </div>
+                {/* </div> */}
             </div> 
             <div className={HomeCSS.section}>
                 <div className={HomeCSS.info}>
