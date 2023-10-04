@@ -1,0 +1,148 @@
+.slider {
+    height: 100%;
+    margin: auto;
+    position: relative;
+    width: 50%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.slidetrack {
+    display: flex;
+    width: calc(10vw * 12);
+    animation: scroll 40s linear infinite
+}
+
+.slidetrack:hover {
+    animation-play-state: paused;
+}
+
+.slide {
+    width: 10vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1vw;
+    perspective: 100px;
+}
+
+img {
+    padding: 10px;
+    width: 100%;
+    transition: transform 0.3s cubic-bezier(1,-0.05,.74,.43);
+}
+
+.projectinfo {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    position: absolute;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    font-size: clamp(0px, calc(0.7vw), 50px);
+    white-space: nowrap;
+    z-index: -1;
+}
+
+.projectdescription {
+    position: absolute;
+    bottom: 22%;
+}
+
+img:hover {
+    transform: scale(0.85);
+}
+
+img:hover + .projectinfo {
+    display: flex;
+    animation: inforeveal 1s ease;
+}
+
+@keyframes inforeveal {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.slider::before,
+.slider::after {
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 15%;
+    z-index: 2;
+}
+
+.slider::before {
+    left: 0;
+    top: 0;
+}
+
+.slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-10vw * 6));
+    }
+}
+
+.projects {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    height: 100vh;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+.textsection {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sectiontitle {
+    font-weight: 600;
+    font-size: clamp(0px, calc(2vh + 2vw), 100px);
+}
+
+.sectiontext {
+    font-size: clamp(0px, calc(0.7vh + 0.7vw), 50px);
+}
+
+.skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: clamp(0px, calc(10vh), 20px);
+}
+
+.gitlinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(0px, calc(0.5vh + 0.5vw), 30px);
+    white-space: nowrap;
+}
+
+.gitimg {
+    height: auto;
+    width: clamp(100px, 5vw, 200px);
+}
