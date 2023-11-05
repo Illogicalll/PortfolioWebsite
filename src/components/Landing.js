@@ -83,7 +83,7 @@ export default function Landing() {
                 setOverlay(<Overlay />) 
                 onOpen()}
             }/>
-            <div style={{position: "absolute", display:"flex", flexDirection:"row", alignItems: "end", width: "4%", height: "auto", top: "7%", left: "2%", }}>
+            <div style={{position: "absolute", display:"flex", flexDirection:"row", alignItems: "end", width: "4%", height: "auto", top: "7%", left: "2%", filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>
                 <img src="/arrow.png" alt="arrow" style={{transform: "rotate(-20deg)"}}></img>
                 <p style={{fontSize: "1vw", transform: "translateY(15px)", textAlign: "center"}}>Contact Me!</p>
             </div>
