@@ -2,7 +2,7 @@ import Ztext from 'react-ztext';
 import { ArrowDownIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { useColorMode } from '@chakra-ui/react';
 import { gsap } from "gsap";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
     Modal,
     ModalOverlay,
@@ -17,9 +17,6 @@ import {
   } from '@chakra-ui/react'
 import { EmailIcon, DownloadIcon, ExternalLinkIcon } from '@chakra-ui/icons'
 import CV from '../Will-Murphy.pdf';
-import Particles from "react-particles";
-import { loadHyperspacePreset } from "tsparticles-preset-hyperspace";
-import { useCallback } from "react";
 
 export default function Landing() {
 
@@ -31,9 +28,9 @@ export default function Landing() {
 
     const Overlay = () => (
         <ModalOverlay
-          backdropFilter='blur(10px) hue-rotate(90deg)'
+          backdropFilter='blur(10px)'
         />
-      )
+    )
 
     const { isOpen, onOpen, onClose } = useDisclosure()
     const [overlay, setOverlay] = React.useState(<Overlay />)
@@ -54,38 +51,42 @@ export default function Landing() {
         window.open('https://www.linkedin.com/in/will-murphy-34a280290/', '_blank');
     }
 
-    function particlesInit(tsParticles) {
-        console.log("init", tsParticles);
-      
-        loadHyperspacePreset(tsParticles);
-      }
+    function scroll() {
+        window.scrollBy({
+            top: window.innerHeight,
+            behavior: 'smooth'
+        });
+    }
 
-    const particlesLoaded = useCallback(async container => {
-        await console.log(container);
-    }, []);
+    const [atTop, setatTop] = useState(true);
+    const ScrollToTopButton = () => {
+        
+        const handleScroll = () => {
+          if (window.scrollY === 0) {
+            setatTop(true);
+          } else {
+            setatTop(false);
+          }
+        };
 
+        useEffect(() => {
+            window.addEventListener('scroll', handleScroll);
+            return () => {
+                window.removeEventListener('scroll', handleScroll);
+            };
+        }, []);
+    }
 
     return (
         <div class="section">
-            {/* <Particles
-            id="tsparticles"
-            options={{
-                preset: "hyperspace",
-                fullScreen: { enable: false },
-                fps_limit: 60,
-                background: {
-                    color: {
-                      value: "transparent"
-                    }
-                  },
-            }}
-            init={particlesInit}
-            loaded={particlesLoaded}
-            /> */}
             <img class="logo" src="https://avatars.githubusercontent.com/u/68807296?v=4" alt="Will M." onClick={() => {
                 setOverlay(<Overlay />) 
                 onOpen()}
             }/>
+            <div style={{position: "absolute", display:"flex", flexDirection:"row", alignItems: "end", width: "4%", height: "auto", top: "7%", left: "2%", }}>
+                <img src="/arrow.png" alt="arrow" style={{transform: "rotate(-20deg)"}}></img>
+                <p style={{fontSize: "1vw", transform: "translateY(15px)", textAlign: "center"}}>Contact Me!</p>
+            </div>
             <Modal isCentered isOpen={isOpen} onClose={onClose}>
                 {overlay}
                 <ModalContent>
@@ -137,9 +138,10 @@ export default function Landing() {
                     <p>Computer Science Student</p>
                 </div>
             </div>
-            <div class="continue" style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>
-                <ArrowDownIcon class="arrow" boxSize="100%"/>
-            </div>
+            <ScrollToTopButton />
+                <div class="continue" style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none', opacity: atTop === true ? '1' : '0'}} onClick={scroll}>
+                    <ArrowDownIcon class="arrow" boxSize="100%"/>
+                </div>
         </div> 
     );
 }

@@ -46,8 +46,8 @@
 
 .logo {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 2.2%;
+    left: 2%;
     height: auto;
     width: 2%;
     border-radius: 50%;
@@ -144,7 +144,7 @@
     border-radius: 50px;
     align-items: center;
     justify-content: center;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
 }
 
 .continue:hover {
