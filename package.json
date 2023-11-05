@@ -1,5 +1,5 @@
 {
-  "homepage": "https://illogicalll.github.io/PortfolioWebsite",
+  "homepage": "https://w-murphy.com",
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
@@ -12,7 +12,6 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "framer-motion": "^10.16.4",
-    "gh-pages": "^6.0.0",
     "gsap": "^3.12.2",
     "luxy.js": "^0.1.0",
     "react": "^18.2.0",
@@ -53,5 +52,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.0.0"
   }
 }
