@@ -16,7 +16,7 @@ export default function Experience() {
                     <p class="section-text">
                         Currently my computer science related experience is limited to my university work and personal endeavours.
                         However, my general work experience can be found on my <Link color='teal.500' href={CV} target='_blank' style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>CV</Link>.
-                        <br/>
+                        <br/> <br/>
                         In terms of my university work, some examples of relevant courses I have taken include:
                         <ul style={{paddingLeft: '3vw'}}>
                             <li>Web Application Development</li>
