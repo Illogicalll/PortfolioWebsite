@@ -39,6 +39,11 @@
     overflow: hidden;
 }
 
+#tsparticles {
+    height: 100vh;
+    color:rgba(20, 19, 19, 1);
+}
+
 .logo {
     position: absolute;
     top: 20px;
@@ -47,6 +52,11 @@
     width: 2%;
     border-radius: 50%;
     user-select: none;
+}
+
+.logo:hover {
+    animation: light-glow 2s infinite;
+    border-radius: 50%;
 }
 
 .theme {
@@ -226,7 +236,8 @@
 .proj-image {
     padding: 10px;
     width: 100%;
-    transition: transform 0.3s cubic-bezier(1,-0.05,.74,.43);
+    transition: transform 0.3s cubic-bezier(1,-0.05,.74,.43); 
+    height: 100%;
 }
 
 .projectinfo {

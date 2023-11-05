@@ -1,5 +1,6 @@
 import { useColorMode } from '@chakra-ui/react';
 import { Link } from 'react-scroll';
+import { Tooltip } from '@chakra-ui/react'
 
 export default function Nav({sectionNames}) {
 
@@ -17,7 +18,9 @@ export default function Nav({sectionNames}) {
                 offset={0}
                 duration={600}
                 >
-                    <div class="dot" style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}></div>
+                    <Tooltip label={sectionName} aria-label="A tooltip" placement="left">
+                        <div class="dot" style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}></div>
+                    </Tooltip>
                 </Link>
             ))}
         </div>

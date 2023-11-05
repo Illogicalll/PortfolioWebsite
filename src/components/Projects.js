@@ -21,7 +21,7 @@ export default function Projects() {
     }
 
     function redirectProj5() {
-        window.open('https://github.com/Illogicalll/WAD2GroupProject', '_blank');
+        window.open('https://github.com/Illogicalll?tab=repositories', '_blank');
     }
 
     return (
@@ -30,74 +30,74 @@ export default function Projects() {
                 <div class={colorMode === 'dark' ? 'darkgrad slider' : 'lightgrad slider'}>
                     <div class="slidetrack">
                         <div class="slide">
-                            <img class="proj-image" src="https://avatars.githubusercontent.com/u/68807296?v=4" onClick={redirectPortfolio} alt="portfolio"></img>
+                            <img class="proj-image" src="/portfolioproject.png" onClick={redirectPortfolio} alt="portfolio"></img>
                             <div class="projectinfo" style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>
                                 <h1 class="projecttitle">Online Portfolio</h1>
                                 <p class="projectdescription">Click Me!</p>
                             </div>
                         </div>
                         <div class="slide">
-                            <img class="proj-image" src="https://avatars.githubusercontent.com/u/68807296?v=4" onClick={redirectSolar} alt="solar"></img>
+                            <img class="proj-image" src="/solarproject.png" onClick={redirectSolar} alt="solar"></img>
                             <div class="projectinfo" style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>
                                 <h1 class="projecttitle">Solar System Simluation</h1>
                                 <p class="projectdescription">Click Me!</p>
                             </div>
                         </div>
                         <div class="slide">
-                            <img class="proj-image" src="https://avatars.githubusercontent.com/u/68807296?v=4" onClick={redirectTopTrumps} alt="toptrumps"></img>
+                            <img class="proj-image" src="/toptrumpslogo.png" onClick={redirectTopTrumps} alt="toptrumps"></img>
                             <div class="projectinfo" style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>
                                 <h1 class="projecttitle">TopTrumps Game Chat-Bot</h1>
                                 <p class="projectdescription">Click Me!</p>
                             </div>
                         </div>
                         <div class="slide">
-                            <img class="proj-image" src="https://avatars.githubusercontent.com/u/68807296?v=4" onClick={redirectEcom} alt="ecom"></img>
+                            <img class="proj-image" src="/ecommerceproject.png" onClick={redirectEcom} style={{filter: colorMode === 'light' ? 'invert(100%)' : 'none'}} alt="ecom"></img>
                             <div class="projectinfo" style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>
                                 <h1 class="projecttitle">E-Commerce Website</h1>
                                 <p class="projectdescription">Click Me!</p>
                             </div>
                         </div>
                         <div class="slide">
-                            <img class="proj-image" src="https://avatars.githubusercontent.com/u/68807296?v=4" onClick={redirectProj5} alt="project 5"></img>
+                            <img class="proj-image" src="/githublogo.png" onClick={redirectProj5} style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}} alt="project 5"></img>
                             <div class="projectinfo" style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>
-                                <h1 class="projecttitle">Project 5</h1>
+                                <h1 class="projecttitle">More</h1>
                                 <p class="projectdescription">Click Me!</p>
                             </div>
                         </div>
 
 
                         <div class="slide">
-                            <img class="proj-image" src="https://avatars.githubusercontent.com/u/68807296?v=4" onClick={redirectPortfolio} alt="portfolio"></img>
+                            <img class="proj-image" src="/portfolioproject.png" onClick={redirectPortfolio} alt="portfolio"></img>
                             <div class="projectinfo" style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>
                                 <h1 class="projecttitle">Online Portfolio</h1>
                                 <p class="projectdescription">Click Me!</p>
                             </div>
                         </div>
                         <div class="slide">
-                            <img class="proj-image" src="https://avatars.githubusercontent.com/u/68807296?v=4" onClick={redirectSolar} alt="solar"></img>
+                            <img class="proj-image" src="/solarproject.png" onClick={redirectSolar} alt="solar"></img>
                             <div class="projectinfo" style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>
                                 <h1 class="projecttitle">Solar System Simulation</h1>
                                 <p class="projectdescription">Click Me!</p>
                             </div>
                         </div>
                         <div class="slide">
-                            <img class="proj-image" src="https://avatars.githubusercontent.com/u/68807296?v=4" onClick={redirectTopTrumps} alt="toptrumps"></img>
+                            <img class="proj-image" src="/toptrumpslogo.png" onClick={redirectTopTrumps} alt="toptrumps"></img>
                             <div class="projectinfo" style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>
                                 <h1 class="projecttitle">TopTrumps Chat-Bot</h1>
                                 <p class="projectdescription">Click Me!</p>
                             </div>
                         </div>
                         <div class="slide">
-                            <img class="proj-image" src="https://avatars.githubusercontent.com/u/68807296?v=4" onClick={redirectEcom} alt="ecom"></img>
+                            <img class="proj-image" src="/ecommerceproject.png" onClick={redirectEcom} style={{filter: colorMode === 'light' ? 'invert(100%)' : 'none'}} alt="ecom"></img>
                             <div class="projectinfo" style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>
                                 <h1 class="projecttitle">E-Commerce Website</h1>
                                 <p class="projectdescription">Click Me!</p>
                             </div>
                         </div>
                         <div class="slide">
-                            <img class="proj-image" src="https://avatars.githubusercontent.com/u/68807296?v=4" onClick={redirectProj5} alt="project 5"></img>
+                            <img class="proj-image" src="/githublogo.png" onClick={redirectProj5} style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}} alt="project 5"></img>
                             <div class="projectinfo" style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>
-                                <h1 class="projecttitle">Project 5</h1>
+                                <h1 class="projecttitle">More...</h1>
                                 <p class="projectdescription">Click Me!</p>
                             </div>
                         </div>
@@ -119,8 +119,6 @@ export default function Projects() {
                     <div class="gitlinks">
                         <p>Clicking a project will take you to their respective</p>
                         <a href="https://github.com/Illogicalll" target="_blank" rel="noreferrer"> <img class="gitimg" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="github" style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}/> </a>
-                        <p>or</p>
-                        <a href="https://stgit.dcs.gla.ac.uk/2766915m" target="_blank" rel="noreferrer"> <img class="gitimg" src="https://img.shields.io/badge/GitLab-330F63?style=for-the-badge&logo=gitlab&logoColor=white" alt="gitlab" style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}/> </a>
                         <p>pages</p>
                     </div>
                 </div>
