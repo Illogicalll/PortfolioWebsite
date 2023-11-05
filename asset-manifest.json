@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/PortfolioWebsite/static/css/main.09e24fc7.css",
+    "main.js": "/PortfolioWebsite/static/js/main.2699efc7.js",
+    "static/js/787.1ed0c42c.chunk.js": "/PortfolioWebsite/static/js/787.1ed0c42c.chunk.js",
+    "static/media/Will-Murphy.pdf": "/PortfolioWebsite/static/media/Will-Murphy.982f006a6f5176593d15.pdf",
+    "index.html": "/PortfolioWebsite/index.html",
+    "main.09e24fc7.css.map": "/PortfolioWebsite/static/css/main.09e24fc7.css.map",
+    "main.2699efc7.js.map": "/PortfolioWebsite/static/js/main.2699efc7.js.map",
+    "787.1ed0c42c.chunk.js.map": "/PortfolioWebsite/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.09e24fc7.css",
+    "static/js/main.2699efc7.js"
+  ]
+}
