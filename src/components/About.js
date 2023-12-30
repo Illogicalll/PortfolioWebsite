@@ -15,6 +15,7 @@ import {
   } from '@chakra-ui/react'
   import { EmailIcon, DownloadIcon, ExternalLinkIcon } from '@chakra-ui/icons'
   import CV from '../Will-Murphy.pdf';
+import { isMobile } from 'react-device-detect';
 
 export default function About() {
 
@@ -46,7 +47,7 @@ export default function About() {
 
     return (
         <div class="section">
-            <div class="info">
+            <div class={isMobile ? "infoMobile" : "info"}>
             <Modal isCentered isOpen={isOpen} onClose={onClose}>
                 {overlay}
                 <ModalContent>
@@ -71,11 +72,11 @@ export default function About() {
                     <ModalFooter />
                     </ModalContent>
                 </Modal>
-                <div class="text-section" style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>
-                    <h1 class="section-title">
+                <div class={isMobile ? "text-section-mobile" : "text-section"} style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>
+                    <h1 class={isMobile ? "section-title-mobile" : "section-title"}>
                         About Me
                     </h1>
-                    <p class="section-text">
+                    <p class={isMobile ? "section-text-mobile" : "section-text"}>
                         Hi there! I'm Will, a Computer Science student at the University of Glasgow. 
                         I'm passionate about software engineering and web development, and I'm always 
                         looking for new opportunities to learn and grow. I'm currently looking for an 

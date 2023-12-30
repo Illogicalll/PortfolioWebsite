@@ -17,6 +17,7 @@ import {
   } from '@chakra-ui/react'
 import { EmailIcon, DownloadIcon, ExternalLinkIcon } from '@chakra-ui/icons'
 import CV from '../Will-Murphy.pdf';
+import { isMobile } from 'react-device-detect';
 
 export default function Landing() {
 
@@ -79,13 +80,13 @@ export default function Landing() {
 
     return (
         <div class="section">
-            <img class="logo" src="https://avatars.githubusercontent.com/u/68807296?v=4" alt="Will M." onClick={() => {
+            <img class="logo" style={{width: isMobile ? '30px' : ''}} src="https://avatars.githubusercontent.com/u/68807296?v=4" alt="Will M." onClick={() => {
                 setOverlay(<Overlay />) 
                 onOpen()}
             }/>
-            <div style={{position: "absolute", display:"flex", flexDirection:"row", alignItems: "end", width: "4%", height: "auto", top: "7%", left: "2%", filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>
+            <div style={{position: "absolute", display:"flex", flexDirection:"row", alignItems: "end", width: isMobile ? '30px' : '4%', height: "auto", top: "7%", left: isMobile ? '15px' : '2%', filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>
                 <img src="/arrow.png" alt="arrow" style={{transform: "rotate(-20deg)"}}></img>
-                <p style={{fontSize: "1vw", transform: "translateY(15px)", textAlign: "center"}}>Contact Me!</p>
+                <p style={{fontSize: isMobile ? "10px" : "1vw", transform: "translateY(15px)", textAlign: "center"}}>Contact Me!</p>
             </div>
             <Modal isCentered isOpen={isOpen} onClose={onClose}>
                 {overlay}
@@ -111,14 +112,14 @@ export default function Landing() {
                 <ModalFooter />
                 </ModalContent>
             </Modal>
-            <div class="theme" onClick={doColorMode}>
+            <div class="theme" style={{width: isMobile ? '30px' : ''}} onClick={doColorMode}>
                 {colorMode === 'light' ? <MoonIcon class="dark" boxSize="100%"/> : <SunIcon class="light" boxSize="100%"/>}
             </div>
             <div class="hero" style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>
                 <Ztext
                     depth='5rem'
                     direction='both'
-                    event='pointer'
+                    event={isMobile ? 'none' : 'pointer'}
                     eventRotation='15deg'
                     eventDirection='default'
                     fade={false}
@@ -135,7 +136,7 @@ export default function Landing() {
                     </span>
                 </Ztext>
                 <div class="subtitle">
-                    <p>Computer Science Student</p>
+                    <p style={{fontSize: isMobile ? '10px' : ''}}>Computer Science Student</p>
                 </div>
             </div>
             <ScrollToTopButton />

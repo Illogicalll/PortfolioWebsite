@@ -1,6 +1,7 @@
 import { useColorMode } from '@chakra-ui/react';
 import { Link } from '@chakra-ui/react';
 import CV from '../Will-Murphy.pdf';
+import { isMobile } from 'react-device-detect';
 
 export default function Experience() {
 
@@ -8,12 +9,12 @@ export default function Experience() {
 
     return (
         <div class="section">
-            <div class="info">
-                <div class="text-section" style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>
-                    <h1 class="section-title">
+            <div class={isMobile ? "infoMobile" : "info"}>
+                <div class={isMobile ? "text-section-mobile" : "text-section"} style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>
+                    <h1 class={isMobile ? "section-title-mobile" : "section-title"}>
                         Experience
                     </h1>
-                    <p class="section-text">
+                    <p class={isMobile ? "section-text-mobile" : "section-text"}>
                         Currently my computer science related experience is limited to my university work and personal endeavours.
                         However, my general work experience can be found on my <Link color='teal.500' href={CV} target='_blank' style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>CV</Link>.
                         <br/> <br/>

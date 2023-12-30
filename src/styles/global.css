@@ -180,10 +180,36 @@
     justify-content: space-between;
 }
 
+.infoMobile {
+    position: absolute;
+    top: 50%;
+    width: 100vw;
+    height: 100vh;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
 .text-section {
     display: flex;
     flex-direction: column;
     width: 40%;
+}
+
+.text-section-mobile {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    text-align: center;
+}
+
+.textsectionmobile {
+    width: 100vw;
+    text-align: center;
+    height: 50%;
 }
 
 .section-title {
@@ -191,8 +217,18 @@
     font-weight: 600;
 }
 
+.section-title-mobile {
+    font-size: 47px;
+    white-space: nowrap;
+    font-weight: 600;
+}
+
 .section-text {
     font-size: clamp(0px, calc(0.7vh + 0.7vw), 50px);
+}
+
+.section-text-mobile {
+    font-size: 13px;
 }
 
 .section-media {
@@ -214,14 +250,30 @@
     overflow: hidden;
 }
 
+.slidermobile {
+    margin: auto;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+    overflow: scroll;
+}
+
 .slidetrack {
     display: flex;
     width: calc(10vw * 10);
-    animation: scroll 40s linear infinite
+    animation: scroll 40s linear infinite;
+}
+
+.slidetrackmobile {
+    display: flex;
 }
 
 .slidetrack:hover {
     animation-play-state: paused;
+}
+
+.hide {
+    display: none;
 }
 
 .slide {
@@ -233,11 +285,26 @@
     perspective: 100px;
 }
 
+.slidemobile {
+    width: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+}
+
 .proj-image {
     padding: 10px;
     width: 100%;
     transition: transform 0.3s cubic-bezier(1,-0.05,.74,.43); 
     height: 100%;
+}
+
+.badge-image {
+    padding: 10px;
+    width: 80px;
+    transition: transform 0.3s cubic-bezier(1,-0.05,.74,.43);
+    height: 38px;
 }
 
 .projectinfo {
@@ -264,6 +331,15 @@
 }
 
 .proj-image:hover + .projectinfo {
+    display: flex;
+    animation: inforeveal 1s ease;
+}
+
+.badge-image:hover {
+    transform: scale(0.85);
+}
+
+.badge-image:hover + .projectinfo {
     display: flex;
     animation: inforeveal 1s ease;
 }
@@ -325,6 +401,14 @@
     padding-left: 5%;
 }
 
+.projectsMobile {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: absolute;
+    justify-content: space-evenly;
+}
+
 .textsection {
     height: 100%;
     display: flex;
@@ -356,6 +440,15 @@
     justify-content: center;
     align-items: center;
     font-size: clamp(0px, calc(0.5vh + 0.5vw), 30px);
+    white-space: nowrap;
+}
+
+.gitlinksmobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
     white-space: nowrap;
 }
 
