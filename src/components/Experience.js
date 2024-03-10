@@ -15,15 +15,17 @@ export default function Experience() {
                         Experience
                     </h1>
                     <p class={isMobile ? "section-text-mobile" : "section-text"}>
-                        Currently my computer science related experience is limited to my university work and personal endeavours.
-                        However, my general work experience can be found on my <Link color='teal.500' href={CV} target='_blank' style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>CV</Link>.
+                        I am currently employed as a software engineer for the <Link color='teal.500' href="https://guss.org.uk/" target='_blank' rel="noreferrer" style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>Glasgow University Software Service</Link>.
+                        Additionally, my general work experience can be found on my <Link color='teal.500' href={CV} target='_blank' style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>CV</Link>.
                         <br/> <br/>
                         In terms of my university work, some examples of relevant courses I have taken include:
                         <ul style={{paddingLeft: '3vw'}}>
+                            <li>Professional Software Development</li>
                             <li>Web Application Development</li>
                             <li>Object Oriented Software Engineering</li>
                             <li>Algorithms and Data Structures</li>
                             <li>Networks and Operating Systems</li>
+                            <li>Database Systems</li>
                         </ul>
                     </p>
                 </div>

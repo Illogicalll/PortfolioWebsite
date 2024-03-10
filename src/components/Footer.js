@@ -7,7 +7,7 @@ export default function Footer() {
 
     return (
         <div class="footer" style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>
-            <p>© 2023 Will Murphy</p>
+            <p>© 2024 Will Murphy</p>
         </div>
     );
 }

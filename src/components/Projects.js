@@ -1,5 +1,6 @@
 import { useColorMode } from '@chakra-ui/react';
 import { isMobile } from 'react-device-detect';
+import { SimpleGrid, Card, Heading, Text, Button, Flex, VStack, Spacer } from '@chakra-ui/react';
 
 export default function Projects() {
 
@@ -13,10 +14,6 @@ export default function Projects() {
         window.open('https://github.com/Illogicalll/Solar-System-Simulation', '_blank');
     }
 
-    function redirectTopTrumps() {
-        window.open('https://github.com/Illogicalll/TopTrumps', '_blank');
-    }
-
     function redirectEcom() {
         window.open('https://github.com/Illogicalll/WAD2GroupProject', '_blank');
     }
@@ -25,108 +22,91 @@ export default function Projects() {
         window.open('https://github.com/Illogicalll?tab=repositories', '_blank');
     }
 
+    const badgesWidth = isMobile ? '300px' : '500px';
+
     return (
         <div class="section">
-                <div class={ isMobile ? "projectsMobile" : "projects"}>
-                    <div class={ isMobile ? colorMode === 'dark' ? 'darkgrad slidermobile' : 'lightgrad slidermobile' : colorMode === 'dark' ? 'darkgrad slider' : 'lightgrad slider'}>
-                        <div class={ isMobile ? "slidetrackmobile" : "slidetrack" }>
-                            <div class={ isMobile ? "slidemobile" : "slide" }>
-                                <img class="proj-image" src="/portfolioproject.png" onClick={redirectPortfolio} alt="portfolio"></img>
-                                <div class="projectinfo" style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>
-                                    <h1 class="projecttitle">Online Portfolio</h1>
-                                    <p class="projectdescription">Click Me!</p>
-                                </div>
-                            </div>
-                            <div class={ isMobile ? "slidemobile" : "slide" }>
-                                <img class="proj-image" src="/solarproject.png" onClick={redirectSolar} alt="solar"></img>
-                                <div class="projectinfo" style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>
-                                    <h1 class="projecttitle">Solar System Simluation</h1>
-                                    <p class="projectdescription">Click Me!</p>
-                                </div>
-                            </div>
-                            <div class={ isMobile ? "slidemobile" : "slide" }>
-                                <img class="proj-image" src="/toptrumpslogo.png" onClick={redirectTopTrumps} alt="toptrumps"></img>
-                                <div class="projectinfo" style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>
-                                    <h1 class="projecttitle">TopTrumps Game Chat-Bot</h1>
-                                    <p class="projectdescription">Click Me!</p>
-                                </div>
-                            </div>
-                            <div class={ isMobile ? "slidemobile" : "slide" }>
-                                <img class="proj-image" src="/ecommerceproject.png" onClick={redirectEcom} style={{filter: colorMode === 'light' ? 'invert(100%)' : 'none'}} alt="ecom"></img>
-                                <div class="projectinfo" style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>
-                                    <h1 class="projecttitle">E-Commerce Website</h1>
-                                    <p class="projectdescription">Click Me!</p>
-                                </div>
-                            </div>
-                            <div class={ isMobile ? "slidemobile" : "slide" }>
-                                <img class="proj-image" src="/githublogo.png" onClick={redirectProj5} style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}} alt="project 5"></img>
-                                <div class="projectinfo" style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>
-                                    <h1 class="projecttitle">More</h1>
-                                    <p class="projectdescription">Click Me!</p>
-                                </div>
-                            </div>
-
-
-                            <div class={ isMobile ? "hide" : "slide" }>
-                                <img class="proj-image" src="/portfolioproject.png" onClick={redirectPortfolio} alt="portfolio"></img>
-                                <div class="projectinfo" style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>
-                                    <h1 class="projecttitle">Online Portfolio</h1>
-                                    <p class="projectdescription">Click Me!</p>
-                                </div>
-                            </div>
-                            <div class={ isMobile ? "hide" : "slide" }>
-                                <img class="proj-image" src="/solarproject.png" onClick={redirectSolar} alt="solar"></img>
-                                <div class="projectinfo" style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>
-                                    <h1 class="projecttitle">Solar System Simulation</h1>
-                                    <p class="projectdescription">Click Me!</p>
-                                </div>
-                            </div>
-                            <div class={ isMobile ? "hide" : "slide" }>
-                                <img class="proj-image" src="/toptrumpslogo.png" onClick={redirectTopTrumps} alt="toptrumps"></img>
-                                <div class="projectinfo" style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>
-                                    <h1 class="projecttitle">TopTrumps Chat-Bot</h1>
-                                    <p class="projectdescription">Click Me!</p>
-                                </div>
-                            </div>
-                            <div class={ isMobile ? "hide" : "slide" }>
-                                <img class="proj-image" src="/ecommerceproject.png" onClick={redirectEcom} style={{filter: colorMode === 'light' ? 'invert(100%)' : 'none'}} alt="ecom"></img>
-                                <div class="projectinfo" style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>
-                                    <h1 class="projecttitle">E-Commerce Website</h1>
-                                    <p class="projectdescription">Click Me!</p>
-                                </div>
-                            </div>
-                            <div class={ isMobile ? "hide" : "slide" }>
-                                <img class="proj-image" src="/githublogo.png" onClick={redirectProj5} style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}} alt="project 5"></img>
-                                <div class="projectinfo" style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>
-                                    <h1 class="projecttitle">More...</h1>
-                                    <p class="projectdescription">Click Me!</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                        <div class={ isMobile ? "textsectionmobile" : "textsection" } style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>
-                            <h1 class={ isMobile ? "section-title-mobile" : "sectiontitle" }>Projects</h1>
-                            <p class={ isMobile ? "section-text-mobile" : "sectiontext" }>Here are some of my projects! <br /> Whether they be work-related or just for personal enjoyment, <br /> these helped build out my understanding of the following languages and frameworks:<br /><br /> </p>
-                            <div class="skills" style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>
+            <Flex height="100vh" width="100%" justify="center" align="center" padding={"30px"}>
+                <Flex justify="center" align="center">
+                    <div>
+                        <VStack align='center' textAlign={'center'} maxWidth="700px">
+                            <h1 class={isMobile ? "section-title-mobile" : "section-title"} style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>
+                                Projects
+                            </h1>
+                            <p style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>{!isMobile ? (<div>Here are some of my projects!<br /></div>) : ""}Whether they be work-related or just for personal enjoyment, <br /> these helped build out my understanding of the following languages and frameworks:<br /><br /> </p>
+                            <SimpleGrid spacing={1} templateColumns='repeat(auto-fill, minmax(80px, 1fr))' maxW={badgesWidth}>
                                 <a href="https://www.python.org" target="_blank" rel="noreferrer">  <img class="badge-image" src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue" alt="python"/> </a>
                                 <a href="https://openjdk.org/" target="_blank" rel="noreferrer"> <img class="badge-image" src="https://img.shields.io/badge/OpenJDK-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="openjdk"/> </a>
                                 <a href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noreferrer">  <img class="badge-image" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="html5"/> </a>
                                 <a href="https://en.wikipedia.org/wiki/CSS" target="_blank" rel="noreferrer">  <img class="badge-image" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="css3"/> </a>
                                 <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank" rel="noreferrer"> <img class="badge-image" src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="js"/> </a>
-                            </div>
-                            <div class="skills" style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none', paddingTop: '30px'}}>
                                 <a href="https://react.dev/" target="_blank" rel="noreferrer"> <img class="badge-image" src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="reacy"/> </a>
                                 <a href="https://www.djangoproject.com/" target="_blank" rel="noreferrer"> <img class="badge-image" src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=green" alt="django"/> </a>
                                 <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img class="badge-image" src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white" alt="mysql"/> </a>
-                            </div>
-                            <br />
-                            <div class={ isMobile ? "gitlinksmobile" : "gitlinks" }>
-                                <p>Click a project to go to its</p>
-                                <a href="https://github.com/Illogicalll" target="_blank" rel="noreferrer"> <img class="gitimg" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="github" style={{filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}/> </a>
-                                <p>page</p>
-                            </div>
-                        </div>
-                </div>
+                                <a href="https://svelte.dev/" target="_blank" rel="noreferrer">
+                                <img src="https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00" class="badge-image" alt="Svelte" /> </a>
+                                <a href="https://kit.svelte.dev/" target="_blank" rel="noreferrer">
+                                <img src="https://img.shields.io/badge/SvelteKit-FF3E00?style=for-the-badge&logo=Svelte&logoColor=white" class="badge-image" alt="SvelteKit" /> </a>
+                                <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer">
+                                <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" class="badge-image" alt="TypeScript" /> </a>
+                                <a href="https://www.sqlite.org/" target="_blank" rel="noreferrer">
+                                <img src="https://img.shields.io/badge/Sqlite-003B57?style=for-the-badge&logo=sqlite&logoColor=white" class="badge-image" alt="SQLite" /> </a>
+                                <br />
+                            </SimpleGrid>
+                            {isMobile ? (<div>
+                                <Card variant={"outline"} align='center' style={{backgroundColor: colorMode === 'dark' ? '#141313' : 'white'}}>
+                                    <Flex direction={'column'} height="100%" padding="20px">
+                                        <Heading size='md' style={{paddingBottom: '5px', filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>View Here</Heading>
+                                        <Spacer />
+                                        <Text style={{paddingBottom: '5px', filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>All my projects are available on my Github profile</Text>
+                                        <Spacer />
+                                        <Button onClick={redirectProj5}>Github</Button>
+                                    </Flex>
+                                </Card>
+                            </div>) : (<div>
+                                <SimpleGrid columns={[1, 2, 4]} spacing={4}>
+                                <Card variant={"outline"} align='center' style={{backgroundColor: colorMode === 'dark' ? '#141313' : 'white'}}>
+                                        <Flex direction={'column'} height="100%" padding="20px">
+                                        <Heading size='md' style={{paddingBottom: '5px', filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>Online Developer Portfolio</Heading>
+                                        <Spacer />
+                                        <Text style={{paddingBottom: '5px', filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>What you're looking at right now :)</Text>
+                                        <Spacer />
+                                        <Button onClick={redirectPortfolio}>View here</Button>
+                                    </Flex>
+                                </Card>
+                                <Card variant={"outline"} align='center' style={{backgroundColor: colorMode === 'dark' ? '#141313' : 'white'}}>
+                                    <Flex direction={'column'} height="100%" padding="20px">
+                                        <Heading size='md' style={{paddingBottom: '5px', filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>Solar System Simulation</Heading>
+                                        <Spacer />
+                                        <Text style={{paddingBottom: '5px', filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>Educational tool intended to help GCSE physics students</Text>
+                                        <Spacer />
+                                        <Button onClick={redirectSolar}>View here</Button>
+                                    </Flex>
+                                </Card>
+                                <Card variant={"outline"} align='center' style={{backgroundColor: colorMode === 'dark' ? '#141313' : 'white'}}>
+                                    <Flex direction={'column'} height="100%" padding="20px">
+                                        <Heading size='md' style={{paddingBottom: '5px', filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}> E-Commerce Website</Heading>
+                                        <Spacer />
+                                        <Text style={{paddingBottom: '5px', filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>Online marketplace, part of a university group project</Text>
+                                        <Spacer />
+                                        <Button onClick={redirectEcom}>View here</Button>
+                                    </Flex>
+                                </Card>
+                                <Card variant={"outline"} align='center' style={{backgroundColor: colorMode === 'dark' ? '#141313' : 'white'}}>
+                                    <Flex direction={'column'} height="100%" padding="20px">
+                                        <Heading size='md' style={{paddingBottom: '5px', filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>{isMobile ? "View Here" : "View More Projects Here"}</Heading>
+                                        <Spacer />
+                                        <Text style={{paddingBottom: '5px', filter: colorMode === 'dark' ? 'invert(100%)' : 'none'}}>All my projects are available on my Github profile</Text>
+                                        <Spacer />
+                                        <Button onClick={redirectProj5}>Github</Button>
+                                    </Flex>
+                                </Card>
+                                </SimpleGrid>
+                            </div>)}
+                        </VStack>
+                    </div>
+                </Flex>
+            </Flex>
         </div>
     );
 }

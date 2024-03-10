@@ -6,6 +6,4 @@
 
 ## later
 
-- update github profile readme
 - clean up css
-- implement mobile version
