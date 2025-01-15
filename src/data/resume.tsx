@@ -215,7 +215,7 @@ export const DATA = {
       dates: "Nov 2021 - Feb 2022",
       active: true,
       description:
-        "An educational tool intended for GCSE Physics students. Intended to supplement lessons about the solar system, introducing an interactive element and enhancing the learning experience.",
+        "An educational tool designed for GCSE Physics students. Intended to supplement lessons about the solar system, introducing an interactive element and enhancing the learning experience.",
       technologies: ["Python"],
       links: [
         {
