@@ -177,7 +177,7 @@ export default function Page() {
                 want to chat send me an&nbsp;
                 <Link
                   href={DATA.contact.social.Email.url}
-                  className="inline cursor-pointer underline text-black"
+                  className="inline cursor-pointer underline text-black dark:text-white"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -186,7 +186,7 @@ export default function Page() {
                 &nbsp;or message me on&nbsp;
                 <Link
                   href={DATA.contact.social.LinkedIn.url}
-                  className="inline cursor-pointer underline text-black"
+                  className="inline cursor-pointer underline text-black dark:text-white"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
