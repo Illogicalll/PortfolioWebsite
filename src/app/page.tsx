@@ -129,7 +129,7 @@ export default function Page() {
                   university/school. For more projects visit my&nbsp;
                   <Link
                     href="https://github.com/Illogicalll"
-                    className="inline cursor-pointer underline text-black"
+                    className="inline cursor-pointer underline text-black dark:text-white"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
