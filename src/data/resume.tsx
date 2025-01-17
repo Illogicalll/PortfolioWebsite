@@ -206,8 +206,8 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/beaugoodwin.png",
-      video: "",
+      image: "",
+      video: "/beaugoodwin.mp4",
     },
     {
       title: "Solar System Simulation",
