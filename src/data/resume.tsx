@@ -159,7 +159,7 @@ export const DATA = {
     {
       title: "911 Trackrats",
       href: "https://github.com/Illogicalll/911trackrats",
-      dates: "Aug 2023 - Sep 2023",
+      dates: "Aug 2024 - Sep 2024",
       active: true,
       description:
         "An archive site for a group of Porsche 911 enthusiasts to document their track days.",
