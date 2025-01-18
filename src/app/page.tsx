@@ -155,6 +155,7 @@ export default function Page() {
                   tags={project.technologies}
                   image={project.image}
                   video={project.video}
+                  videomobile={project.videomobile}
                   links={project.links}
                 />
               </BlurFade>

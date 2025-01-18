@@ -154,6 +154,7 @@ export const DATA = {
       ],
       image: "/wip.png",
       video: "",
+      videomobile: "",
     },
     {
       title: "911 Trackrats",
@@ -176,8 +177,9 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/911trackrats.png",
-      video: "",
+      image: "",
+      video: "/911.mp4",
+      videomobile: "/911_mobile.mp4",
     },
     {
       title: "Beau Goodwin",
@@ -208,6 +210,7 @@ export const DATA = {
       ],
       image: "",
       video: "/beaugoodwin.mp4",
+      videomobile: "/beaugoodwin_mobile.mp4",
     },
     {
       title: "Solar System Simulation",
@@ -231,6 +234,7 @@ export const DATA = {
       ],
       image: "/solarsystem.png",
       video: "",
+      videomobile: "",
     },
   ],
 } as const;

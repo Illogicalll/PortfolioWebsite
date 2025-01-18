@@ -20,6 +20,7 @@ interface Props {
   link?: string;
   image?: string;
   video?: string;
+  videomobile?: string;
   links?: any;
   className?: string;
 }
@@ -33,6 +34,7 @@ export function ProjectCard({
   link,
   image,
   video,
+  videomobile,
   links,
   className,
 }: Props) {
@@ -47,14 +49,24 @@ export function ProjectCard({
         className={cn("block cursor-pointer", className)}
       >
         {video && (
-          <video
-            src={video}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="pointer-events-none mx-auto h-40 w-full object-cover object-top" // needed because random black line at bottom of video
-          />
+          <>
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              src={video}
+              className="pointer-events-none mx-auto h-40 w-full object-cover object-top hidden sm:block"
+            />
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              src={videomobile}
+              className="pointer-events-none mx-auto h-40 w-full object-cover object-top sm:hidden"
+            />
+          </>
         )}
         {image && (
           <Image
