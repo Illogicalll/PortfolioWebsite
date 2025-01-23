@@ -10,7 +10,7 @@ export const DATA = {
   description:
     "A Computing Science student with a burning passion for Software Engineering and Web Development.",
   summary:
-    "I thrive on embracing challenges, seeking optimised solutions, and navigating complexities in an everchanging environment. In the past, I have [interned and had work experience at start-up tech companies](/#work) and at the moment I am [pursuing a masters degree in computing science](/#education). There is always more to learn and I am eager to continute to grow in this exciting industry!",
+    "I thrive on embracing challenges, seeking optimised solutions, and navigating complexities in an everchanging environment. In the past, I have [interned and had work experience at start-up tech companies](/#work) and at the moment I am [pursuing a masters degree in computing science](/#education). There is always more to learn and I am eager to continue to grow in this exciting industry!",
   avatarUrl: "/me.jpg",
   skills: [
     "React",
