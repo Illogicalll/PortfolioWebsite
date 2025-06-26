@@ -5,12 +5,12 @@ export const DATA = {
   name: "Will Murphy",
   initials: "WM",
   url: "https://www.w-murphy.com",
-  location: "Glasgow, UK",
-  locationLink: "https://www.google.com/maps/place/glasgow",
+  location: "London, UK",
+  locationLink: "https://www.google.com/maps/place/london",
   description:
-    "A Computing Science student with a burning passion for Software Engineering and Web Development.",
+    "A Computing Science graduate with a burning passion for Software Engineering and Web Development.",
   summary:
-    "I thrive on embracing challenges, seeking optimised solutions, and navigating complexities in an everchanging environment. In the past, I have [interned and had work experience at start-up tech companies](/#work) and at the moment I am [pursuing a masters degree in computing science](/#education). There is always more to learn and I am eager to continute to grow in this exciting industry!",
+    "I thrive on embracing challenges, seeking optimised solutions, and building intuitive and scalable software for the real world. I recently graduated with a first class degree and in the past I have [interned and had work experience at start-up tech companies](/#work). At the moment I am seeking full-time employment, as I am eager to continue to grow in this exciting industry!",
   avatarUrl: "/me.jpg",
   skills: [
     "React",
@@ -114,15 +114,15 @@ export const DATA = {
     {
       school: "University of Glasgow",
       href: "https://www.gla.ac.uk/",
-      degree: "Computing Science BSc (Hons) + MSci Faster Route",
+      degree: "Computing Science BSc (Hons) First Class Degree",
       logoUrl: "/uofg.png",
       start: "2022",
-      end: "2026",
+      end: "2025",
     },
     {
       school: "Simon Langton Grammar School for Boys",
       href: "https://thelangton.org.uk/",
-      degree: "GCSEs: Average A* across all 11 courses, A-Levels: A*, A, A",
+      degree: "A-Levels: A* A A, GCSEs: Average A* across all 11 courses",
       logoUrl: "/langton.png",
       start: "2015",
       end: "2022",
@@ -132,7 +132,7 @@ export const DATA = {
     {
       title: "AutoAssign",
       href: "https://github.com/Illogicalll/Automarker",
-      dates: "Sep 2024 - Present",
+      dates: "Sep 2024 - March 2025",
       active: true,
       description:
         "An online coding assignment automated marking platform with a competitive element designed to help educators delivering computing science related courses.",
@@ -152,7 +152,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/wip.png",
+      image: "/autoassign.png",
       video: "",
       videomobile: "",
     },
