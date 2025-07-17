@@ -1,0 +1,49 @@
+{
+  "name": "Will Murphy",
+  "subtitle": "A source for apps developed by Will Murphy",
+  "description": "",
+  "iconURL": "https://i.imgur.com/kICAmjH.png",
+  "website": "https://w-murphy.com/",
+  "patreonURL": "",
+  "tintColor": "#6156e2",
+  "featuredApps": [
+    "com.m0wullvpp8.4pllmjgc1v"
+  ],
+  "apps": [
+    {
+      "name": "solace",
+      "bundleIdentifier": "com.m0wullvpp8.4pllmjgc1v",
+      "marketplaceID": "",
+      "developerName": "Will Murphy",
+      "subtitle": "simple solitaire",
+      "localizedDescription": "an ad-free minimalist solitaire game",
+      "iconURL": "https://i.imgur.com/vXwIfIv.png",
+      "tintColor": "#393844",
+      "category": "games",
+      "screenshots": [
+        "https://i.imgur.com/tH8WBaB.png",
+        "https://i.imgur.com/wGsQsUV.png",
+        "https://i.imgur.com/9UMcWbv.png",
+        "https://i.imgur.com/bZL3jmh.png",
+        "https://i.imgur.com/eC23oIf.png"
+      ],
+      "versions": [
+        {
+          "downloadURL": "https://w-murphy.com/solace.ipa",
+          "size": 22400000,
+          "version": "0.1.0",
+          "buildVersion": null,
+          "date": "2025-07-17T18:50:00+01:00",
+          "localizedDescription": null,
+          "minOSVersion": null
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {}
+      },
+      "patreon": {}
+    }
+  ],
+  "news": []
+}
