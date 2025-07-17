@@ -5,7 +5,6 @@
   "iconURL": "https://i.imgur.com/kICAmjH.png",
   "website": "https://w-murphy.com/",
   "tintColor": "#6156e2",
-  "featuredApps": ["com.m0wullvpp8.4pllmjgc1v"],
   "apps": [
     {
       "name": "solace",
@@ -44,4 +43,3 @@
   ],
   "news": []
 }
-
