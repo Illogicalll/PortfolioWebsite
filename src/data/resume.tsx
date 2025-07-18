@@ -18,8 +18,11 @@ export const DATA = {
     "Typescript",
     "Java",
     "Python",
+    "Flutter",
+    "Dart",
     "Docker",
     "Svelte",
+    "TailwindCSS",
     "Django",
     "MySQL",
     "C++",
@@ -128,7 +131,7 @@ export const DATA = {
       end: "2022",
     },
   ],
-  projects: [
+  bigprojects: [
     {
       title: "AutoAssign",
       href: "https://github.com/Illogicalll/Automarker",
@@ -151,8 +154,39 @@ export const DATA = {
           href: "https://github.com/Illogicalll/Automarker",
           icon: <Icons.github className="size-3" />,
         },
+        {
+          type: "Video Presentation",
+          href: "https://www.youtube.com/watch?v=wZbMp503dlk",
+          icon: <Icons.youtube className="size-3" />,
+        }
       ],
       image: "/autoassign.png",
+      imagemobile: "/autoassignmobile.png",
+      video: "",
+      videomobile: "",
+    }
+  ],
+  projects: [
+    {
+      title: "solace",
+      href: "https://github.com/Illogicalll/solace",
+      dates: "Jul 2025",
+      active: true,
+      description:
+        "A minimalist and advertisement-free solitaire game with practical features and statistics tracking.",
+      technologies: [
+        "Flutter",
+        "Dart",
+        "Xcode"
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/Illogicalll/solace",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/autoassign2.png",
       video: "",
       videomobile: "",
     },
