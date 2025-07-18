@@ -25,12 +25,21 @@
       ],
       "versions": [
         {
-          "downloadURL": "https://w-murphy.com/solace.ipa",
+          "downloadURL": "https://w-murphy.com/solace-v2.ipa",
           "size": 22400000,
+          "version": "0.2.0",
+          "buildVersion": "0.2.0",
+          "date": "2025-07-18T12:51:00+01:00",
+          "localizedDescription": null,
+          "minOSVersion": null
+        },
+        {
           "version": "0.1.0",
-          "buildVersion": "0.1.0",
           "date": "2025-07-17T18:50:00+01:00",
           "localizedDescription": null,
+          "downloadURL": "https://w-murphy.com/solace-v1.ipa",
+          "size": 22400000,
+          "buildVersion": "0.1.0",
           "minOSVersion": null
         }
       ],
