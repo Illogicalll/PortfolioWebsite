@@ -69,7 +69,7 @@ export const DATA = {
       href: "https://guss.org.uk/",
       badges: [],
       location: "Remote",
-      title: "Software Engineer",
+      title: "Full Stack Software Engineer",
       logoUrl: "/guss.png",
       start: "Feb 2024",
       end: "Present",
@@ -158,13 +158,13 @@ export const DATA = {
           type: "Video Presentation",
           href: "https://www.youtube.com/watch?v=wZbMp503dlk",
           icon: <Icons.youtube className="size-3" />,
-        }
+        },
       ],
       image: "/autoassign.png",
       imagemobile: "/autoassignmobile.png",
       video: "",
       videomobile: "",
-    }
+    },
   ],
   projects: [
     {
@@ -174,11 +174,7 @@ export const DATA = {
       active: true,
       description:
         "A minimalist and advertisement-free solitaire game with practical features and statistics tracking.",
-      technologies: [
-        "Flutter",
-        "Dart",
-        "Xcode"
-      ],
+      technologies: ["Flutter", "Dart", "Xcode"],
       links: [
         {
           type: "Source",
