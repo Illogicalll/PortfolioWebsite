@@ -43,12 +43,12 @@ export function ProjectCardLarge({
   return (
     <Card
       className={
-        "flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full w-full"
+        "flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full w-full cursor-target"
       }
     >
       <Link
         href={href || "#"}
-        className={cn("block cursor-pointer", className)}
+        className={cn("block cursor-none", className)}
       >
         {video && (
           <>
@@ -112,7 +112,7 @@ export function ProjectCardLarge({
           <div className="flex flex-row flex-wrap items-start gap-1">
             {links?.map((link: any, idx: any) => (
               <Link href={link?.href} key={idx} target="_blank">
-                <Badge key={idx} className="flex gap-2 px-2 py-1 text-[10px]">
+                <Badge key={idx} className="flex gap-2 px-2 py-1 text-[10px] cursor-none cursor-target">
                   {link.icon}
                   {link.type}
                 </Badge>
