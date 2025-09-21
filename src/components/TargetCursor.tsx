@@ -13,13 +13,6 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
   spinDuration = 2,
   hideDefaultCursor = true
 }) => {
-  const isMobile = useMemo(() => {
-    if (typeof navigator === 'undefined') return false;
-    return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-  }, []);
-
-  if (isMobile) return null;
-
   const cursorRef = useRef<HTMLDivElement>(null);
   const cornersRef = useRef<NodeListOf<HTMLDivElement>>(null);
   const spinTl = useRef<gsap.core.Timeline>(null);
@@ -332,6 +325,12 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
         .to(cursorRef.current, { rotation: '+=360', duration: spinDuration, ease: 'none' });
     }
   }, [spinDuration]);
+
+  const isMobile = useMemo(() => {
+    if (typeof navigator === 'undefined') return false;
+    return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  }, []);
+  if (isMobile) return null;
 
   return (
     <div
