@@ -182,9 +182,9 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/autoassign2.png",
-      video: "",
-      videomobile: "",
+      image: "",
+      video: "/solace.mp4",
+      videomobile: "/solace_mobile.mp4",
     },
     {
       title: "911 Trackrats",
