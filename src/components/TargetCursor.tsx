@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useRef, useCallback, useMemo } from 'react';
+import React, { useEffect, useRef, useCallback, useMemo, useState } from 'react';
 import { gsap } from 'gsap';
 
 export interface TargetCursorProps {
@@ -17,6 +17,7 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
   const cornersRef = useRef<NodeListOf<HTMLDivElement>>(null);
   const spinTl = useRef<gsap.core.Timeline>(null);
   const dotRef = useRef<HTMLDivElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
   const constants = useMemo(
     () => ({
       borderWidth: 3,
@@ -34,6 +35,10 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
       duration: 0.1,
       ease: 'power3.out'
     });
+  }, []);
+
+  useEffect(() => {
+    setIsMobile(/Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
   }, []);
 
   useEffect(() => {
@@ -326,13 +331,7 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
     }
   }, [spinDuration]);
 
-  const isMobile = useMemo(() => {
-    if (typeof navigator === 'undefined') return false;
-    return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-  }, []);
-  if (isMobile) return null;
-
-  return (
+  return isMobile ? <div className="hidden"></div> : (
     <div
       ref={cursorRef}
       className="fixed top-0 left-0 w-0 h-0 pointer-events-none z-[9999] mix-blend-difference transform -translate-x-1/2 -translate-y-1/2"
